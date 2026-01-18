@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Note Manager</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+    <script defer src="/static/app.js"></script>
+</head>
+<body>
+<div class="container">
+
+    <h1>📝 Note Manager</h1>
+
+    <form class="note-form" method="post">
+        <input name="title" placeholder="Заголовок" required>
+        <textarea name="content" placeholder="Текст заметки"></textarea>
+        <button type="submit">Добавить</button>
+    </form>
+
+    <div class="notes">
+        {% for note in notes %}
+            <div class="note">
+                <div class="note-header">
+                    <h3>{{ note.title }}</h3>
+                    <form method="post" action="/delete/{{ note.id }}">
+                        <button class="delete-btn">✕</button>
+                    </form>
+                </div>
+                <p>{{ note.content }}</p>
+                <span class="date">{{ note.created_at.strftime("%d.%m.%Y %H:%M") }}</span>
+            </div>
+        {% else %}
+            <p class="empty">Заметок пока нет</p>
+        {% endfor %}
+    </div>
+
+</div>
+</body>
+</html>

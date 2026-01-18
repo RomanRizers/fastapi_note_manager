@@ -1,0 +1,71 @@
+# ====================
+# Python
+# ====================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.eggs/
+
+# ====================
+# uv (Python manager)
+# ====================
+.venv/
+.uv/
+.python-version
+
+# uv cache / temp
+.uv-cache/
+.uv-env/
+
+# ====================
+# Dependencies / build
+# ====================
+build/
+dist/
+
+# ====================
+# Databases
+# ====================
+*.sqlite
+*.sqlite3
+*.db
+
+# ====================
+# Environment variables
+# ====================
+.env
+.env.*
+
+# ====================
+# Logs
+# ====================
+*.log
+
+# ====================
+# Docker
+# ====================
+docker-data/
+*.pid
+
+# ====================
+# macOS
+# ====================
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Finder / Spotlight
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+
+# ====================
+# IDE / Editors
+# ====================
+.vscode/
+.idea/
+*.iml
